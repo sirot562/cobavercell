@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Mochamad Nazar Sirot</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #020617;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    width: 100%;
+    padding: 15px 50px;
+    background: rgba(2,6,23,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero .content {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    background: #38bdf8;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* ABOUT */
+.about {
+    padding: 100px 50px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 20px;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+/* PROJECT */
+.projects {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #0f172a;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card .content {
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* GALLERY */
+.gallery {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* CONTACT */
+.contact {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ANIMASI */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h1 class="logo">Portofolio Mochamad Nazar Sirot</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="content fade">
+        <h1>Halo, Saya <span>Mochamad Nazar Sirot</span></h1>
+        <p>creator digital|fullstack developer</p>
+        <button onclick="scrollToSection('projects')">Lihat Project</button>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about fade" id="about">
+    <img src="C:\Users\HALLO\Downloads\Shadow Photography Men.jfif">
+    <div class="about-text">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah seorang mahasiswa IT yang berfokus pada pengembangan solusi digital menyeluruh
+            —mulai dari membangun logika backend yang efisien hingga menciptakan antarmuka pengguna yang menarik. 
+            Sebagai kreator digital, saya tidak hanya menulis baris kode,
+             tetapi juga menyusun narasi visual yang kuat untuk membangun komunitas dan identitas brand.
+              Saya percaya bahwa teknologi terbaik adalah teknologi yang tidak hanya bekerja dengan baik, tetapi juga mampu menginspirasi penggunanya.</p>
+    </div>
+</section>
+
+<!-- PROJECT -->
+<section class="projects fade" id="projects">
+    <h2>Project Saya</h2>
+    <div class="project-list">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6">
+            <div class="content">
+                <h3>Website Company</h3>
+                <p>Website modern untuk bisnis</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+            <div class="content">
+                <h3>Aplikasi Kasir</h3>
+                <p>Sistem kasir digital</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6">
+            <div class="content">
+                <h3>UI Design</h3>
+                <p>portofolio nazar </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery fade" id="gallery">
+    <h2>Galeri</h2>
+    <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+    </div>
+</section>
+<!-- CONTACT -->
+<section class="contact fade" id="contact">
+    <h2>Kontak</h2>
+    <p>Whatsapp: 085853562817</p>
+</section>
+<script>
+// SCROLL
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+// ANIMASI SCROLL
+const fades = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+    fades.forEach(el => {r
+        const pos = el.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 100) {
+            el.classList.add("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
